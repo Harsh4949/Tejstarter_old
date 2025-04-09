@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEJSTARTER Registration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Register in TEJSTARTER</h2>
+
+    <form id="registrationForm" class="space-y-5">
+      
+      <!-- Full Name -->
+      <div>
+        <label for="fullName" class="block text-sm font-medium text-gray-700">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Full Name" required
+               class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+      </div>
+
+      <!-- Date of Birth -->
+      <div>
+        <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required
+               class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required
+               class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+      </div>
+
+      <!-- Phone Number -->
+      <div>
+        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="10-digit Mobile Number" pattern="[0-9]{10}" required
+               class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+        <!-- <small class="text-gray-500 text-xs">Enter a valid 10-digit number without country code.</small> -->
+      </div>
+
+   <!-- Education Level -->
+      <div>
+        <label for="educationLevel" class="block text-sm font-medium text-gray-700">Education Level</label>
+        <select id="educationLevel" name="educationLevel" required
+                class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none">
+          <option value="" disabled selected>Select Education Level</option>
+          <option value="Primary">Primary</option>
+          <option value="Secondary">Secondary</option>
+          <option value="post-secondary">Post-secondary (Diploma, BTech, etc.)</option>
+        </select>
+      </div>
+
+      <!-- Dynamic Sub-Level Dropdown -->
+      <div id="subLevelContainer" class="hidden">
+        <label for="subLevel" class="block text-sm font-medium text-gray-700">Select Specific Class / Degree</label>
+        <select id="subLevel" name="subLevel"
+                class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none">
+          <!-- JS fills options -->
+        </select>
+      </div>
+
+
+      <!-- College Selection -->
+      <div id="collegeContainer">
+        <label for="college" class="block text-sm font-medium text-gray-700">Select College</label>
+        <select id="college" name="college" required
+                class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none">
+          <option value="" disabled selected>Select College</option>
+          <option value="Shivganga Charitable Trust, Sangli’s Vishveshwarya Technical Campus">Shivganga Charitable Trust, Sangli’s Vishveshwarya Technical Campus</option>
+          <option value="Shikshan Prasarak Sanstha's Padmabhushan Vasantraodada Patil Mahavidyalaya">Shikshan Prasarak Sanstha's Padmabhushan Vasantraodada Patil Mahavidyalaya</option>
+          <option value="Sanjay Bhokare Group of Institutes, Miraj">Sanjay Bhokare Group of Institutes, Miraj</option>
+          <option value="Padmabhooshan Vasantraodada Patil Institute of Technology, Budhgaon">Padmabhooshan Vasantraodada Patil Institute of Technology, Budhgaon</option>
+          <option value="Government Polytechnic, Miraj">Government Polytechnic, Miraj</option>
+          <option value="Government Residence Women Polytechnic, Tasgaon">Government Residence Women Polytechnic, Tasgaon</option>
+          <option value="शासकीय औद्योगिक प्रशिक्षण संस्था, कवठेमहाकाळ, जि: सांगली">शासकीय औद्योगिक प्रशिक्षण संस्था, कवठेमहाकाळ, जि: सांगली</option>
+          <option value="शासकीय औद्योगिक प्रशिक्षण संस्था, तासगाव, जि: सांगली">शासकीय औद्योगिक प्रशिक्षण संस्था, तासगाव, जि: सांगली</option>
+        </select>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit"
+              class="w-full bg-green-500 text-white py-2 rounded-md font-semibold shadow-lg transition-transform duration-300 hover:bg-green-600 hover:scale-105 active:scale-95 focus:ring-4 focus:ring-green-300">
+        REGISTER
+      </button>
+    </form>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    const educationLevel = document.getElementById("educationLevel");
+    const subLevelContainer = document.getElementById("subLevelContainer");
+    const subLevel = document.getElementById("subLevel");
+  
+    const majorFieldContainer = document.createElement("div");
+    majorFieldContainer.id = "majorFieldContainer";
+    majorFieldContainer.classList.add("hidden", "mt-4");
+  
+    const majorFieldLabel = document.createElement("label");
+    majorFieldLabel.classList.add("block", "text-sm", "font-medium", "text-gray-700");
+    majorFieldLabel.innerText = "Select Field";
+  
+    const majorFieldSelect = document.createElement("select");
+    majorFieldSelect.id = "majorField";
+    majorFieldSelect.name = "majorField";
+    majorFieldSelect.className = "w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none";
+  
+    majorFieldContainer.appendChild(majorFieldLabel);
+    majorFieldContainer.appendChild(majorFieldSelect);
+    document.getElementById("collegeContainer").before(majorFieldContainer);
+    const levelOptions = {
+      "Primary": ["8th", "9th", "10th"],
+      "Secondary": ["11th", "12th"],
+      "post-secondary": ["Diploma", "BTech", "BA", "BCom", "BSc", "MSc", "BBA", "BCA", "Other"]
+    };
+  
+    const majorFieldsByDegree = {
+      "Diploma": [
+        "Computer Engineering",
+        "Mechanical Engineering",
+        "Civil Engineering",
+        "Electrical Engineering",
+        "Electronics Engineering",
+        "Automobile Engineering",
+        "Information Technology",
+        "Other"
+      ],
+      "BTech": [
+        "Computer Engineering",
+        "Information Technology",
+        "Mechanical Engineering",
+        "Civil Engineering",
+        "Electronics Engineering",
+        "ENTC Engineering",
+        "Artificial Intelligence & Machine Learning",
+        "Data Science",
+        "Electrical Engineering",
+        "Other"
+      ],
+      "BSc": [
+        "Computer Science",
+        "Mathematics",
+        "Physics",
+        "Chemistry",
+        "Biotechnology",
+        "Information Technology",
+        "Electronics",
+        "Other"
+      ],
+      "MSc": [
+        "Computer Science",
+        "Mathematics",
+        "Physics",
+        "Chemistry",
+        "Information Technology",
+        "Artificial Intelligence",
+        "Other"
+      ],
+      "BBA": [
+        "Marketing",
+        "Finance",
+        "Human Resource Management",
+        "Business Analytics",
+        "International Business",
+        "Other"
+      ],
+      "BCA": [
+        "Computer Applications",
+        "Software Development",
+        "Networking",
+        "Cybersecurity",
+        "Other"
+      ]
+   };
+
+  
+    educationLevel.addEventListener("change", function () {
+      const selectedLevel = this.value;
+      const subOptions = levelOptions[selectedLevel] || [];
+  
+      if (subOptions.length > 0) {
+        subLevel.innerHTML = `<option value="" disabled selected>Select Option</option>` + subOptions.map(opt => `<option value="${opt}">${opt}</option>`).join('');
+        subLevelContainer.classList.remove("hidden");
+      } else {
+        subLevelContainer.classList.add("hidden");
+        majorFieldContainer.classList.add("hidden");
+      }
+  
+      majorFieldContainer.classList.add("hidden"); // Hide by default
+    });
+  
+    subLevel.addEventListener("change", function () {
+      const selectedSub = this.value;
+      const majorFields = majorFieldsByDegree[selectedSub];
+  
+      if (majorFields) {
+        majorFieldSelect.innerHTML = `<option value="" disabled selected>Select Field</option>` + majorFields.map(opt => `<option value="${opt}">${opt}</option>`).join('');
+        majorFieldContainer.classList.remove("hidden");
+      } else {
+        majorFieldContainer.classList.add("hidden");
+      }
+    });
+  
+    document.getElementById("registrationForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      window.location.href = "registration_successful.html";
+    });
+  </script>
+  
+</body>
+</html>

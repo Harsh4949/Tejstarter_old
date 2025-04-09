@@ -1,0 +1,567 @@
+<!-- 
+  collab.html
+  Uses the same structure and styles as your index page.
+  Make sure the file paths for images, CSS, and JS match your project.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Untree.co" />
+    <link rel="shortcut icon" href="TEJASLOGO.png" />
+
+    <meta name="description" content="TEJSTARTER Collaborations Page" />
+    <meta name="keywords" content="bootstrap, bootstrap5" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Fonts -->
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+
+    <!-- CSS Libraries from your index page -->
+    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/glightbox.min.css" />
+    <link rel="stylesheet" href="css/flatpickr.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>TEJSTARTER - Collaborations</title>
+  </head>
+  <body>
+    <!-- Mobile Menu (same as index) -->
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    <!-- End Mobile Menu -->
+
+    <!-- Navbar -->
+    <nav class="site-nav">
+      <div class="container">
+        <div class="menu-bg-wrap">
+          <div class="site-navigation">
+            <div class="row g-0 align-items-center">
+              <!-- Logo -->
+              <div class="col-2">
+                <a
+                  href="index.html"
+                  class="logo m-0 float-start fw-bold text-uppercase"
+                  style="
+                    font-size: 28px;
+                    background: black;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+                    letter-spacing: 1.5px;
+                    transition: transform 0.3s ease-in-out;
+                  "
+                  onmouseover="this.style.transform='scale(1.1)'"
+                  onmouseout="this.style.transform='scale(1)'"
+                >
+                  TEJSTARTER<span class="text-primary">.</span>
+                </a>
+              </div>
+              <!-- End Logo -->
+
+              <!-- Nav Links -->
+              <div class="col-8 text-center">
+                <ul
+                  class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto"
+                >
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li class="has-children">
+                    <a href="financing.html">Community</a>
+                    <ul class="dropdown">
+                      <li><a href="financing.html">Student</a></li>
+                      <li><a href="single.html">Investor</a></li>
+                      <li><a href="case-study.html">Entrepreneur</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                  <!-- Set "Collaborations" as active -->
+                  <li class="active"><a href="collab.html">Collaborations</a></li>
+                </ul>
+              </div>
+              <!-- End Nav Links -->
+
+              <div class="col-2 text-end">
+                <a
+                  href="#"
+                  class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
+                >
+                  <span></span>
+                </a>
+                <a href="#" class="call-us d-flex align-items-center">
+                  <span class="icon-phone"></span>
+                  <span>86004 50851</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Hero Section (Optional) -->
+    <div class="hero overlay">
+      <img src="images/blob.svg" alt="" class="img-fluid blob" />
+      <div class="container">
+        <div class="row align-items-center justify-content-center pt-5">
+          <div class="col-lg-6 text-center text-lg-start pe-lg-5">
+            <h1 class="heading text-white mb-3" data-aos="fade-up">
+              Collaborations
+            </h1>
+            <h2
+              class="text-white mb-5"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Partnerships that help shape the future
+            </h2>
+            <div
+              class="align-items-center mb-5"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <a href="contact.html" class="btn btn-outline-white-reverse me-2">
+                Contact us
+              </a>
+              <br /><br />
+              <p style="color: darkgray;">
+                Scroll down to see our Partnerships ↓
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Hero Section -->
+
+    <!-- Companies Section -->
+    <div class="section">
+      <div class="container">
+        <h2
+          class="heading text-primary mb-4"
+          data-aos="fade-up"
+          data-aos-delay="0"
+        >
+          Companies
+        </h2>
+        <div class="row align-items-stretch">
+          <!-- Company 1 -->
+          <div
+            class="col-md-4 mb-4 d-flex"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="p-4 bg-white rounded shadow flex-grow-1">
+              <h3>Ydcoders IT SOLUTIONS</h3>
+              <p>Location: Kavathe Mahankal, Sangli</p>
+              <p>
+                Website:
+                <a href="http://ydcoders.com" target="_blank">ydcoders.com</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Company 2 -->
+          <div
+            class="col-md-4 mb-4 d-flex"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="p-4 bg-white rounded shadow flex-grow-1">
+              <h3>Reevasoft Engineers</h3>
+              <p>Location: Pune</p>
+              <p>
+                Website:
+                <a href="https://reevasoftengineers.com/" target="_blank"
+                  >reevasoftengineers.com</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Company 3 -->
+          <div
+            class="col-md-4 mb-4 d-flex"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="p-4 bg-white rounded shadow flex-grow-1">
+              <h3>
+                Shivkrushiraj Agri Research and Development Producer Company
+              </h3>
+              <p>Location: Kavathe Mahankal, Sangli</p>
+              <p>
+                Website:
+                <a href="http://shivkrushiraj.com" target="_blank"
+                  >shivkrushiraj.com</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-stretch">
+          <!-- Company 4 -->
+          <div
+            class="col-md-4 mb-4 d-flex"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="p-4 bg-white rounded shadow flex-grow-1">
+              <h3>Dcpsnps Employees Foundation</h3>
+              <p>
+                Website:
+                <a href="http://dcpsnps.org" target="_blank">dcpsnps.org</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Company 5 -->
+          <div
+            class="col-md-4 mb-4 d-flex"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="p-4 bg-white rounded shadow flex-grow-1">
+              <h3>Dinnch</h3>
+              <p>Location: Sangli</p>
+              <p>
+                Website:
+                <a href="http://dinnch.com" target="_blank">dinnch.com</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Company 6 -->
+          <div
+            class="col-md-4 mb-4 d-flex"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="p-4 bg-white rounded shadow flex-grow-1">
+              <h3>Imagine360tour</h3>
+              <p>Location: Pune</p>
+              <p>
+                Website:
+                <a href="https://imagine360tour.com/" target="_blank"
+                  >imagine360tour.com</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Companies Section -->
+
+    <!-- Colleges Section -->
+    <div class="section">
+      <div class="container">
+        <h2
+          class="heading text-primary mb-4"
+          data-aos="fade-up"
+          data-aos-delay="0"
+        >
+          Colleges
+        </h2>
+        <div class="row align-items-stretch">
+          <!-- College 1 -->
+          <div
+            class="col-md-6 mb-4 d-flex"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="p-4 bg-white rounded shadow flex-grow-1">
+              <h3>
+                Shivganga Charitable Trust, Sangli’s Vishveshwarya Technical
+                Campus Faculty of Degree &amp; Diploma Engineering, Patgaon,
+                Miraj. An ISO 9001-2008 Certified Institute
+              </h3>
+              <p>
+                Website:
+                <a href="https://www.shivgangavtc.org/" target="_blank"
+                  >shivgangavtc.org</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- College 2 -->
+          <div
+            class="col-md-6 mb-4 d-flex"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="p-4 bg-white rounded shadow flex-grow-1">
+              <h3>
+                Shikshan Prasarak Sanstha's Padmabhushan Vasantraodada Patil
+                Mahavidyalaya, Kavathe Mahankal, Sangli (Affiliated to Shivaji
+                University, Kolhapur)
+              </h3>
+              <p>
+                Website:
+                <a href="https://www.pvpkm.org/" target="_blank"
+                  >www.pvpkm.org</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- College 3: Sanjay Bhokare Group of Institutes, Miraj -->
+          <div
+            class="col-md-6 mb-4 d-flex"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="p-4 bg-white rounded shadow flex-grow-1">
+              <h3>Sanjay Bhokare Group of Institutes, Miraj</h3>
+              <p>
+                Website:
+                <a href="http://www.sbgimiraj.org/" target="_blank"
+                  >www.sbgimiraj.org</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- College 4: Padmabhooshan Vasantraodada Patil Institute of Technology, Budhgaon -->
+          <div
+            class="col-md-6 mb-4 d-flex"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="p-4 bg-white rounded shadow flex-grow-1">
+              <h3>
+                Padmabhooshan Vasantraodada Patil Institute of Technology,
+                Budhgaon
+              </h3>
+              <p>
+                Website:
+                <a href="https://www.pvpitsangli.edu.in/" target="_blank"
+                  >www.pvpitsangli.edu.in</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- College 5: government Polytechnic, Miraj -->
+          <div
+            class="col-md-6 mb-4 d-flex"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="p-4 bg-white rounded shadow flex-grow-1">
+              <h3>government Polytechnic, Miraj</h3>
+              <p>
+                Website:
+                <a href="https://gpmiraj.ac.in/" target="_blank"
+                  >gpmiraj.ac.in</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- College 6: Government Residence Women Polytechnic, Tasgaon -->
+          <div
+            class="col-md-6 mb-4 d-flex"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div class="p-4 bg-white rounded shadow flex-grow-1">
+              <h3>Government Residence Women Polytechnic, Tasgaon</h3>
+              <p>
+                Website:
+                <a href="https://www.grwptasgaon.ac.in/" target="_blank"
+                  >www.grwptasgaon.ac.in</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- College 7: शासकीय औद्योगिक प्रशिक्षण संस्था, कवठेमहाकाळ, जि: सांगली (ITI College) -->
+          <div
+            class="col-md-6 mb-4 d-flex"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
+            <div class="p-4 bg-white rounded shadow flex-grow-1">
+              <h3>
+                शासकीय औद्योगिक प्रशिक्षण संस्था, कवठेमहाकाळ, जि: सांगली (ITI
+                College)
+              </h3>
+              <!-- No website provided -->
+            </div>
+          </div>
+
+          <!-- College 8: शासकीय औद्योगिक प्रशिक्षण संस्था, तासगाव, जि: सांगली (ITI College) -->
+          <div
+            class="col-md-6 mb-4 d-flex"
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
+            <div class="p-4 bg-white rounded shadow flex-grow-1">
+              <h3>
+                शासकीय औद्योगिक प्रशिक्षण संस्था, तासगाव, जि: सांगली (ITI College)
+              </h3>
+              <!-- No website provided -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Colleges Section -->
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- Footer -->
+    <div
+      class="site-footer"
+      style="background-color: #007BFF; color: #fff; margin: 0; padding: 40px 0;"
+    >
+      <div class="container-fluid px-0">
+        <div class="row gx-0">
+          <!-- Footer Col 1 -->
+          <div class="col-lg-4 px-5">
+            <div class="widget">
+              <h3>About</h3>
+              <p>
+                Join us today and be part of a community that is shaping the
+                future of entrepreneurship and innovation.
+              </p>
+            </div>
+            <div class="widget">
+              <address>Kavathe Mahankal 416405<br />Sangli</address>
+              <ul class="list-unstyled links">
+                <li>+91 86004 50851</li>
+                <li>
+                  <a
+                    href="mailto:tejstarter@gmail.com"
+                    style="color: #fff; text-decoration: none;"
+                  >
+                    tejstarter@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Footer Col 2 -->
+          <div class="col-lg-4 px-5">
+            <div class="widget">
+              <h3>Company</h3>
+              <ul class="list-unstyled links">
+                <li>
+                  <a href="#" style="color: #fff; text-decoration: none;"
+                    >About us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" style="color: #fff; text-decoration: none;"
+                    >Services</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Footer Col 3 -->
+          <div class="col-lg-4 px-5">
+            <div class="widget">
+              <h3>Navigation</h3>
+              <ul class="list-unstyled links mb-4">
+                <li>
+                  <a href="#" style="color: #fff; text-decoration: none;"
+                    >Our Vision</a
+                  >
+                </li>
+                <li>
+                  <a href="#" style="color: #fff; text-decoration: none;"
+                    >About us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" style="color: #fff; text-decoration: none;"
+                    >Contact us</a
+                  >
+                </li>
+              </ul>
+              <h3>Social</h3>
+              <ul class="list-unstyled social">
+                <li>
+                  <a
+                    href="https://www.instagram.com/tejstarter"
+                    style="color: #fff;"
+                  >
+                    <span class="icon-instagram"></span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/startters/"
+                    style="color: #fff;"
+                  >
+                    <span class="icon-linkedin"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Footer bottom row -->
+        <div class="row gx-0 mt-5">
+          <div class="col-12 text-center" style="padding: 0 20px;">
+            <p>
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>.
+              All Rights Reserved. &mdash; Designed by ->
+              <b><i>TEJSTARTER & Team</i></b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer -->
+
+    <!-- JS Files (same as index) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/flatpickr.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/glightbox.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
