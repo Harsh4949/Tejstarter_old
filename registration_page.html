@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TEJSTARTER Registration</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="bg-gray-100 flex items-center justify-center min-h-screen" id="body">
   <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
     <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Register in TEJSTARTER</h2>
 
@@ -86,15 +87,18 @@
         REGISTER
       </button>
     </form>
+      <button type="submit" id="getExcelBtn">Download Excel</button>
   </div>
 
-    <script src="./firebaseConfig.js"> </script>
   <!-- Scripts -->
-  <script>
+  <script type="module">
+
+  import { storeUserToDatabase,exportToExcel } from './firebaseConfig.js';
+
     const educationLevel = document.getElementById("educationLevel");
     const subLevelContainer = document.getElementById("subLevelContainer");
     const subLevel = document.getElementById("subLevel");
-  
+
     const majorFieldContainer = document.createElement("div");
     majorFieldContainer.id = "majorFieldContainer";
     majorFieldContainer.classList.add("hidden", "mt-4");
@@ -203,10 +207,36 @@
         majorFieldContainer.classList.add("hidden");
       }
     });
+
+    document.getElementById("body").addEventListener("submit", function (event) {
+      event.preventDefault();
+    
+      console.log("open Btn Exel").
+      exportToExcel();
+    });
   
     document.getElementById("registrationForm").addEventListener("submit", function (event) {
       event.preventDefault();
-      window.location.href = "registration_successful.html";
+      exportToExcel();
+      const uniqueUserId = 'user_' + Date.now() + '_' + Math.floor(Math.random() * 10000);
+      const fullName = document.getElementById("fullName").value;
+      const email = document.getElementById("email").value;
+      const birthdate = document.getElementById("dob").value;
+      const majorFieldtext=document.getElementById("majorField").value;
+      const phoneNo=document.getElementById("phone").value;
+      const collegeText=document.getElementById("college").value;
+
+        storeUserToDatabase(
+          uniqueUserId,
+          collegeText,              // college
+          birthdate,               // dob
+          educationLevel.value,    // educationLevel
+          email,                   // email
+          fullName,                // fullName
+          majorFieldtext,           // majorField
+          phoneNo,                  // phone
+          subLevel.value           // subLevel
+        );
     });
   </script>
   
