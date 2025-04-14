@@ -8,9 +8,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen" id="body">
-  <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
-    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Register in TEJSTARTER</h2>
 
+    <!-- Container for the Admin Button (Top-Right Corner) -->
+
+    <div class="absolute top-4 right-4 sm:top-6 sm:right-6 z-50">
+      <button type="submit" onclick="AdminDataCall()"
+        class="bg-green-500 text-white py-2 px-4 rounded-md font-semibold shadow-lg transition-transform duration-300 hover:bg-green-600 hover:scale-105 active:scale-95 focus:ring-4 focus:ring-green-300">
+        Admin
+      </button>
+    </div>
+    
+  <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md mt-[2.55rem]">
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Register in TEJSTARTER</h2>
     <form id="registrationForm" class="space-y-5">
       
       <!-- Full Name -->
@@ -87,7 +96,6 @@
         REGISTER
       </button>
     </form>
-      <button type="submit" id="getExcelBtn">Download Excel</button>
   </div>
 
   <!-- Scripts -->
@@ -208,16 +216,8 @@
       }
     });
 
-    document.getElementById("body").addEventListener("submit", function (event) {
-      event.preventDefault();
-    
-      console.log("open Btn Exel").
-      exportToExcel();
-    });
-  
     document.getElementById("registrationForm").addEventListener("submit", function (event) {
       event.preventDefault();
-      exportToExcel();
       const uniqueUserId = 'user_' + Date.now() + '_' + Math.floor(Math.random() * 10000);
       const fullName = document.getElementById("fullName").value;
       const email = document.getElementById("email").value;
@@ -238,6 +238,12 @@
           subLevel.value           // subLevel
         );
     });
+
+    window.AdminDataCall = function () {
+        event.preventDefault();
+        exportToExcel();
+      };
+
   </script>
   
 

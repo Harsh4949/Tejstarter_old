@@ -42,7 +42,7 @@ export function storeUserToDatabase(uniqueUserId, college, dob, educationLevel, 
 
 
 export async function exportToExcel() {
-  const predefinedPassword = "Harsh@4949";
+  const predefinedPassword = "Tejas@2025";
   const userPassword = prompt("Enter password to export data:");
 
   if (userPassword !== predefinedPassword) {
