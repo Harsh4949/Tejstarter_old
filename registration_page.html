@@ -19,7 +19,25 @@
     </div>
     
   <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md mt-[2.55rem]">
-    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Register in TEJSTARTER</h2>
+    
+    <!-- Header with Title on Left & Cross Button on Right -->
+
+    <div class="flex items-center justify-between mb-6 px-4 sm:px-6">
+      <!-- Heading -->
+      <h2 class="text-2xl font-bold text-gray-800">
+        Register in TEJSTARTER
+      </h2>
+
+      <!-- Back Button with Cross Icon -->
+      <button onclick="history.back()"
+        class="bg-red-500 hover:bg-red-600 text-white rounded-lg p-1 sm:p-1 shadow-md transition-transform duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-red-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 " fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
     <form id="registrationForm" class="space-y-5">
       
       <!-- Full Name -->
